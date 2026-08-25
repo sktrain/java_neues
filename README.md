@@ -1,5 +1,5 @@
-# java17_neues
-Materialien zum Seminar Java 17 (Update von Java8)
+# java_neues
+Materialien zum Seminar Java 25 (Update von Java8)
 
 	
 	JSMIG.pdf				-- Oracle Migration Info
