@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>sk.train</groupId>
+	<artifactId>Maven_Java21_Neues</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>Maven_Java21_Language</name>
+	<description>Ein Basis Maven Projekt mit aktuellen Plugin-Versionen vom
+		September 2024
+		+ Jupiter-Dependencies
+		+ Java21 Samples
+	</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!--    <maven.compiler.source>11</maven.compiler.source>-->
+		<!--    <maven.compiler.target>11</maven.compiler.target>-->
+		<!--    ab Java 9 für den Compiler verfügbar-->
+		<!--    siehe auch
+		https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-release.html -->
+		<maven.compiler.release>21</maven.compiler.release>
+	</properties>
+
+	<dependencies>
+		<!--  testing dependencies  -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.11.0</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
