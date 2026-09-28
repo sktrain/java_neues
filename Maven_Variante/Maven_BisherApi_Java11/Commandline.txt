@@ -1,0 +1,115 @@
+C:\Program Files\Java\jdk-11.0.3\bin> java --list-modules
+java.base@11.0.3
+java.compiler@11.0.3
+java.datatransfer@11.0.3
+java.desktop@11.0.3
+java.instrument@11.0.3
+java.logging@11.0.3
+java.management@11.0.3
+java.management.rmi@11.0.3
+java.naming@11.0.3
+...
+
+
+
+C:\Program Files\Java\jdk-11.0.3\bin> java --describe-module java.base
+java.base@11.0.3
+exports java.io
+exports java.lang
+exports java.lang.annotation
+exports java.lang.invoke
+exports java.lang.module
+...
+uses sun.util.spi.CalendarProvider
+uses java.lang.System$LoggerFinder
+uses java.text.spi.CollatorProvider
+...
+provides java.nio.file.spi.FileSystemProvider with jdk.internal.jrtfs.JrtFileSystemProvider
+...
+qualified exports jdk.internal.org.xml.sax to jdk.jfr
+qualified exports sun.security.validator to jdk.jartool
+qualified exports sun.security.timestamp to jdk.jartool
+...
+contains com.sun.crypto.provider
+contains com.sun.java.util.jar.pack
+contains com.sun.net.ssl
+contains com.sun.net.ssl.internal.ssl
+contains com.sun.net.ssl.internal.www.protocol.https
+contains com.sun.security.cert.internal.x509
+contains jdk.internal.jrtfs
+contains jdk.internal.math
+contains jdk.internal.org.objectweb.asm.tree.analysis
+contains jdk.internal.platform
+contains jdk.internal.util
+contains sun.invoke
+...
+
+
+
+C:\Program Files\Java\jdk-11.0.3\bin> jmod describe ..\jmods\java.base.jmod
+java.base@11.0.3
+exports java.io
+exports java.lang
+...
+uses sun.util.spi.CalendarProvider
+uses java.lang.System$LoggerFinder
+...
+provides java.nio.file.spi.FileSystemProvider with jdk.internal.jrtfs.JrtFileSystemProvider
+...
+qualified exports jdk.internal.org.xml.sax to jdk.jfr
+qualified exports sun.security.validator to jdk.jartool
+...
+contains com.sun.crypto.provider
+contains com.sun.java.util.jar.pack
+contains com.sun.net.ssl
+contains com.sun.net.ssl.internal.ssl
+contains com.sun.net.ssl.internal.www.protocol.https
+contains com.sun.security.cert.internal.x509
+contains jdk.internal.jrtfs
+contains jdk.internal.math
+contains jdk.internal.org.objectweb.asm.tree.analysis
+contains jdk.internal.platform
+contains jdk.internal.util
+contains sun.invoke
+...
+platform windows-amd64
+hashes java.datatransfer SHA-256 e0e1b027ca92c4dce455e7885eacda0dfb41fb820f2c43e328bfdcc70f919d77
+hashes java.desktop SHA-256 6fb48a7cc0d5d73da74c68fbe4929dc1ec089ef69bb28f922d8aa4b6bf28ff81
+hashes java.instrument SHA-256 484088be845bebe5f5e0db51f06fd7a899da602ad640baf0d4f0f1b02fbd214f
+hashes java.logging SHA-256 613e3e8723f8506104b743aa6caa67433d2f8313289a8e39433e2852ad231411
+hashes java.management SHA-256 6c75307ff3b68d2baf75f45edf2758bf6af0f6791d312790bea46239d03f961e
+hashes java.management.rmi SHA-256 a5aaef227684555a13d46d5a2d775a58f2c24edb437cdaa38447817b0691ed21
+hashes java.naming SHA-256 bf322d42c26ed98dd13e61cb7093e8d5214c248b5cdedd273b5fa073a5554dae
+hashes java.net.http SHA-256 e4ae3459fd985c223535105c0ce62db343dfab515c26a9e6e7c404d922c508be
+hashes java.prefs SHA-256 fe972ac419ec1211199cdca0ad13b67e61ed0b06e46f4cfc4cb2c1fbf09fd104
+...
+
+
+
+
+
+C:\Program Files\Java\jdk-11.0.3\bin>jar -d -f C:\Users\stephan\Downloads\jaxb\jaxb-ri\mod\jaxb-api.jar
+
+java.xml.bind 
+
+jar:file:///C:/Users/stephan/Downloads/jaxb/jaxb-ri/mod/jaxb-api.jar/!module-info.class
+exports javax.xml.bind
+exports javax.xml.bind.annotation
+exports javax.xml.bind.annotation.adapters
+exports javax.xml.bind.attachment
+exports javax.xml.bind.helpers
+exports javax.xml.bind.util
+requires java.activation transitive
+requires java.base mandated
+requires java.desktop
+requires java.logging
+requires java.xml transitive
+uses javax.xml.bind.JAXBContextFactory
+
+
+
+
+
+
+
+
