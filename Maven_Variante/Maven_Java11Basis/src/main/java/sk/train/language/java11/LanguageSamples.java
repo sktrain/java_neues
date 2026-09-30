@@ -17,7 +17,7 @@ public class LanguageSamples {
 		var name = "Stephan";	// Compiler leitet Typ String ab
 		
 		//Map<String, Integer>
-		var map = Map.of("Otto", 1, "Karl", 5 , "Otto", 2);		//Java 9: Map.of
+		var map = Map.of("Max", 1, "Karl", 5 , "Otto", 2);		//Java 9: Map.of
 		
 		//Map<String, List<Entry<String, Integer>>>
 		var result = map.entrySet().stream()

@@ -11,10 +11,10 @@ import java.util.TreeSet;
 /** Immutable Collections (Collection Literale) (ab Java 9)
  * 
  * Optimierte Datenstrukturen statt der bisherigen Wrapper.
- * Bei der Erzeugung werden die Inhalte festgelegt und sind dann unveränderbar.
- * Für Elementanzahl von 0 ... 9 überladene Factory-Methoden + varargs-Variante.
+ * Bei der Erzeugung werden die Inhalte festgelegt und sind dann unverÃ¤nderbar.
+ * FÃ¼r Elementanzahl von 0 ... 9 Ã¼berladene Factory-Methoden + varargs-Variante.
  * 
- * Ab Java 10: copyOf-Methode zur Übernahme der Werte aus vorhandener Collection
+ * Ab Java 10: copyOf-Methode zur Ãœbernahme der Werte aus vorhandener Collection
  *
  */
 
@@ -51,7 +51,7 @@ public class ImmutableCollections
         mapping3.forEach((key, value) -> System.out.println(key + ":" + value));
         
         
-        //Sets machen Duplikatsprüfung
+        //Sets machen DuplikatsprÃ¼fung
         try {
 			Set<Integer> numbersDuplicates = Set.of(1, 2, 3, 1);
 		} catch (IllegalArgumentException e) {

@@ -14,7 +14,7 @@ public class ProcessApi {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		
 		//printProcessInfo(ProcessHandle.current());
-		//printAllProcessInfo();		
+		//printAllProcessInfo();
 		//printChildProcessInfo();
 		//destroyProcess();
 		terminateAndThen();
@@ -27,7 +27,7 @@ public class ProcessApi {
 		//System.out.println(processHandle.info().startInstant());		
 	}
 	
-	//alle Prozesse, die für uns sichtbar sind
+	//alle Prozesse, die fÃ¼r uns sichtbar sind
 	private static void printAllProcessInfo() {		
 		Stream<ProcessHandle> sph = ProcessHandle.allProcesses();
 		sph.forEach(ProcessApi::printProcessInfo);		
@@ -44,7 +44,7 @@ public class ProcessApi {
 
 	private static void destroyProcess() throws IOException, InterruptedException {
 		//weiteren Prozess erzeugen
-		Process p = Runtime.getRuntime().exec("calc.exe");
+		Process p = Runtime.getRuntime().exec(new String[] {"calc.exe"});
 		Optional<ProcessHandle> o = ProcessHandle.current().children().findFirst();
 		Thread.sleep(2_000);
 		o.ifPresent( handle -> System.out.println("destroy: " + handle.destroy()));  //freundliche Aufforderung
@@ -53,14 +53,14 @@ public class ProcessApi {
 	}
 	
 	private static void terminateAndThen() throws IOException, InterruptedException {
-		Process p = Runtime.getRuntime().exec("calc.exe");
-		Thread.sleep(2000);
+		Process p = new ProcessBuilder("calc.exe").start();
+		//Thread.sleep(2000);
 		Optional<ProcessHandle> o = ProcessHandle.current().children().findFirst();
 		o.ifPresent( handle -> { 
 								System.out.println("handle ist da");
 								CompletableFuture<ProcessHandle> future = handle.onExit();
 								future.thenRun( () -> System.out.println("Future"));
-								System.out.println("destroy: " + handle.destroy()); 
+								//System.out.println("destroy: " + handle.destroy()); 
 								
 								//ein wenig warten, um die Ausgabe des Future zu sehen
 								try {	//Lambda kann Exception nicht werfen!!
