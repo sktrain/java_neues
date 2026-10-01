@@ -6,10 +6,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>sk.train</groupId>
-	<artifactId>Java_Neues_Bibliiotheken_21-25</artifactId>
+	<artifactId>Maven_Java21-25_Bibs</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<name>Java_Neues_Bibliiotheken</name>
+	<name>Java_Neues_Bibliotheken</name>
 	<description> Neuerungen in den Java SE-Bibliotheken ab Verion 9 bis 25
 	</description>
 
